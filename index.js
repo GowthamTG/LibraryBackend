@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(function (req, res, next) {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://library-frontend-8a5860cq8-gowthamtg.vercel.app"
+    "https://library-frontend-one.vercel.app/"
   );
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
