@@ -14,8 +14,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(bookRoutes);
-app.use(errorLogger);
+app.use(bookRoutes, cors());
+app.use(errorLogger, cors());
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
