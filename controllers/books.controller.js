@@ -65,6 +65,17 @@ booksModel.findAllWithConditions = (req, res) => {
     });
 };
 
+booksModel.addBook = (bookDetails) => {
+  bookDetails.link = "";
+  console.log(bookDetails);
+  return collection
+    .getCollection(COLLECTION_NAME.BOOKS)
+    .then((model) => {
+      model.create(bookDetails);
+    })
+    .then((response) => response);
+};
+
 exports.findAllBooksPublished = (req, res) => {
   const { page, size } = req.query;
   const { limit, offset } = getPagination(page, size);
